@@ -1,0 +1,36 @@
+
+.logo {
+    max-height: 110px;
+    padding-top: 10px;
+}
+
+.navigation {
+    /* border-bottom: 1px solid #1E1E1E; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    padding: 0 14%;
+    flex: 0 0 auto;
+    background-color: #411768;
+
+}
+
+.navigation__logo {
+    justify-self: flex-start;
+}
+
+.navigation__link {
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: 44px;
+    font-weight: 600;
+    color: #ffeae5;
+}
+
+.navigation__link:hover {
+    color: #ffc45f;
+    border-bottom: 1px solid #ffc45f;
+    border-right: 1px solid #ffc45f;
+}

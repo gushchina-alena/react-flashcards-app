@@ -1,0 +1,28 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Source Serif 4', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height: 100%;
+} 
+
+body {
+  background-color: #1E162B;
+  color: #FCF8FF;
+}
+
+.App-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}

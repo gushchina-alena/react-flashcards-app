@@ -1,0 +1,93 @@
+.table__img {
+    width: 40vw;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 60px;
+}
+
+table {
+    width: 60vw;
+    table-layout: auto;
+    width: 700px;
+    font-size: 20px;
+    border: 1px solid #551a8b;
+}
+
+th {
+    font-size: 35px;
+    font-weight: 200;
+    color: #ffeae5;
+    background-color: #411768;
+}
+
+.table__row {
+    text-align: center;
+}
+
+.table__row__btn {
+    margin: 0 auto;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 10px 10px;
+    border: 0;
+    color: #fff;
+    line-height: 1;
+    font-size: 20px;
+    background-color: #551a8b;
+}
+
+.table__row__btn:hover {
+    color: #000;
+    font-weight: 600;
+}
+
+.table__row__btn_cancel {
+    background-color: #4A4453;
+}
+
+.table__row__btn_save {
+    background-color: #4CAF50;
+}
+
+.table__row__btn_edit {
+    background-color: #ffc45f;
+}
+
+.table__row__btn_delete {
+    background-color: #ff5b5e;
+    width: 44px;
+}
+
+
+.table__row__btn:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #FDF7FF;
+}
+
+.table__row__btn_add:hover {
+    background-color: #fff;
+    transition: all .1s ease;
+}
+
+input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px 16px;
+    font-size: 20px;
+    border: 1px solid #fff;
+    background-color: #F2ECFF;
+    color: #551a8b;
+    font-weight: 200;
+}
+
+input:hover {
+    color: #EAB14D;
+    border: 3px solid #EAB14D;
+    padding: 14px 18px;
+}

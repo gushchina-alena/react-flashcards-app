@@ -1,0 +1,34 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    flex: 0 0 auto;
+    margin-top: 50px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    color: #ffeae5;
+    background-color: #411768;
+
+    padding: 12px;
+}
+
+.footer__img {
+    height: 60px;
+}
+
+.footer__heading {
+    font-size: 30px;
+}
+
+.footer__app {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.footer__copyright {
+    font-size: 18px;
+    align-self: flex-end;
+}
+
