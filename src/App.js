@@ -1,11 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Context } from './Context';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import Header from './components/Header';
 import Home from './pages/Home';
 import Quiz from './pages/Quiz';
 import Cards from './pages/Cards';
 import Footer from './components/Footer';
+import Page404 from './pages/Page404';
 
 function App() {
   const [words, setWords] = useState([]);
@@ -19,21 +23,18 @@ function App() {
   }, [])
 
   return (
-    <Context.Provider value={{ words }}>
       <Router>
         <div className="App-container">
           <Header />
-            <Switch>
-              <main className='main'>
-              <Route exact path='/' component={Home}></Route>
-              <Route path='/cards' component={Cards}></Route>
-              <Route path='/quiz' component={Quiz}></Route>
-              </main>
-            </Switch>
+            <Routes>
+              <Route exact path='/' element={<Home/>}></Route>
+              <Route path='/cards' element={<Cards/>}></Route>
+              <Route path='/quiz' element={<Quiz/>}></Route>
+              <Route path='*' element={<Page404 />}></Route>
+            </Routes>
           <Footer />
         </div>
       </Router>
-    </Context.Provider>
   );
 }
 

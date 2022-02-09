@@ -3,41 +3,86 @@ import '../assets/styles/Home.css';
 import cancel from '../assets/images/cancel.png';
 import save from '../assets/images/checked.png';
 
-const Word = ({ ...words }) => {
-    const [isEditMode, setEditMode] = useState(false); 
+const Word = ({ english, russian, transcription }) => {
+    const [isEditMode, setEditMode] = useState(false);
     const [value, setValue] = useState([]);
     const [list, setList] = useState([]);
 
+    const [word, setWord] = useState({ english, russian, transcription });
+
+
     function handleEdit() {
-        return setEditMode(true); 
+        return setEditMode(true);
     }
 
     function handleCancel() {
+        setWord({
+            english,
+            russian,
+            transcription
+        })
         return setEditMode(false);
     }
 
     function handleSave() {
-        value.map((item) => {
-            setList(...item)
-            console.log(list)
-        })
+        setEditMode(false);
     }
 
-
-
-    function getValue(event) {
-        setValue(event.target.value);
+    function onChangeEnglish(event) {
+        setWord({
+            english: event.target.value,
+            russian: word.russian,
+            transcription: word.transcription
+        });
     }
-    return (
-        <tr className='table__row'>
-            <td>{isEditMode ? <input onChange={getValue} defaultValue={words.english}/> : words.english}</td>
-            <td>{isEditMode ? <input defaultValue={words.transcription} /> : words.transcription}</td>
-            <td>{isEditMode ? <input defaultValue={words.russian} /> : words.russian}</td>
-            {isEditMode ? <td><button className='table__row__btn table__row__btn_save' onClick={handleSave}><img src={save}/></button></td>: null}
-            <td>{isEditMode ? <button className='table__row__btn table__row__btn_cancel' onClick={handleCancel}><img src={cancel}/></button> : <button className='table__row__btn table__row__btn_edit' onClick={handleEdit}>&#128221;</button>}</td>
-            {isEditMode ? null : <td><button className='table__row__btn table__row__btn_delete'>&#128465;</button></td>}
-        </tr>
-    );
+
+    function onChangeRussian(event) {
+        setWord({ 
+            russian: event.target.value,
+            english: word.english,
+            transcription: word.transcription
+        });
+    }
+
+    function onChangeTranscription(event) {
+        setWord({ 
+            transcription: event.target.value,
+            english: word.english,
+            russian: word.russian
+        });
+    }
+
+    if (!isEditMode) {
+        return (
+            <tr className='table__row'>
+                <td>{word.english}</td>
+                <td>{word.transcription}</td>
+                <td>{word.russian}</td>
+                <td><button className='table__row__btn table__row__btn_edit' onClick={handleEdit}>&#128221;</button></td>
+                <td><button className='table__row__btn table__row__btn_delete'>&#128465;</button></td>
+            </tr>
+        );
+    } else {
+        return (
+            <tr className='table__row'>
+                <td>
+                    <input value={word.english} onChange={onChangeEnglish} />
+                </td>
+                <td>
+                    <input value={word.transcription} onChange={onChangeTranscription} />
+                </td>
+                <td>
+                    <input value={word.russian} onChange={onChangeRussian} />
+                </td>
+                <td>
+                    <button className='table__row__btn table__row__btn_save' onClick={handleSave}><img src={save} /></button>
+                </td>
+                <td>
+                    <button className='table__row__btn table__row__btn_cancel' onClick={handleCancel}><img src={cancel} /></button>
+                </td>
+            </tr>
+        );
+    }
 }
 
 export default Word; 

@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../assets/styles/Quiz.css';
-
 import '../assets/styles/Card.css';
 
 const Card = ({ ...item }) => {
-    console.log(item)
     const [isFront, setIsFront] = useState(true);
 
     function handleOnClick() {
-        setIsFront(false);
+        setIsFront(!isFront);
     }
+
+    useEffect(() => {
+        setIsFront(true);
+    }, [item.id]);
     return (
         <div>
                 {isFront ?

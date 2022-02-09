@@ -1,9 +1,20 @@
-.quiz__container {
+.quiz {
+    padding-top: 6%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-counter {
+    color:#ffc45f;
+    font-size: 20px;
+}
+
+.card-slider {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 6%;
-    height: 70vh;
 }
 
 .arrow img {
@@ -14,4 +25,43 @@
 .arrow:hover {
     cursor: pointer;
     height: 60px;
+}
+
+.final-words {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #ffeae5;
+}
+
+.final-words__text {
+    margin-bottom: 40px;
+}
+
+.final-words__btn {
+    display: inline-block;
+    outline-color: blueviolet;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 14px 22px;
+    font-size: 22px;
+    color: #551a8b;
+    background-color: #ffc45f;
+    font-weight: 700;
+    
+    text-transform: uppercase;
+}
+
+.final-words__btn:hover {
+    color: #ffeae5;
+    background-color: #7E41B3;
+    outline-color: #ffeae5;
+    transition: all .1s ease;
+}
+
+.arrow-prev {
+    visibility: hidden;
 }

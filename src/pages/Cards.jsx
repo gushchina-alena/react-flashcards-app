@@ -4,18 +4,12 @@ import '../assets/styles/Card.css';
 import '../assets/styles/Cards.css';
 import data from '../data';
 
-
 const Cards = () => {
-    data.map((item) => {
-        return <Card key={item.id} {...item} />
-    })
-
     return (
         <div className='cards'>
             {data.map((item) => {
                 return <Card key={item.id} {...item} />
             })}
-
         </div>
     );
 }

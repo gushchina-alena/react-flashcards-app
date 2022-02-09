@@ -10,10 +10,13 @@ const WordsTable = () => {
         <div className='home-container'>
                 <table border='1' className='table'>
                     <thead className='table__heading-row'>
-                        <th>Word</th>
-                        <th>Transcription</th>
-                        <th>Translation</th>
-                        <th colspan="2">Edit</th>
+                        <tr>
+                            <th>Word</th>
+                            <th>Transcription</th>
+                            <th>Translation</th>
+                            <th colSpan="2">Edit</th>
+                        </tr>
+
                     </thead>
                     <tbody>
                         {data.map((item) => {
