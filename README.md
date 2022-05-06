@@ -7,4 +7,4 @@ Flashcards React App:
 - React Hooks
 - Media Queries
 
-![Capture](https://user-images.githubusercontent.com/77553973/151968154-dd1e8120-a0e5-45c0-8b01-a7cd9cf7904f.PNG)
+![image](https://user-images.githubusercontent.com/77553973/167211484-64928c7d-13c2-4227-8a17-8c50d18cb5ce.png)
