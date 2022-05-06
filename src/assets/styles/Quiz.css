@@ -65,3 +65,7 @@
 .arrow-prev {
     visibility: hidden;
 }
+
+.arrow-disabled {
+    visibility: hidden;
+}

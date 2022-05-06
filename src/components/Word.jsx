@@ -3,13 +3,11 @@ import '../assets/styles/Home.css';
 import cancel from '../assets/images/cancel.png';
 import save from '../assets/images/checked.png';
 
-const Word = ({ english, russian, transcription }) => {
+const Word = ({ english, russian, transcription, id }) => {
     const [isEditMode, setEditMode] = useState(false);
     const [value, setValue] = useState([]);
     const [list, setList] = useState([]);
-
-    const [word, setWord] = useState({ english, russian, transcription });
-
+    const [word, setWord] = useState({ english, russian, transcription, id });
 
     function handleEdit() {
         return setEditMode(true);
@@ -26,6 +24,11 @@ const Word = ({ english, russian, transcription }) => {
 
     function handleSave() {
         setEditMode(false);
+    }
+
+    function handleDelete(id) {
+        console.log(id)
+        setWord([...word.filter((item) => item.id !== id)])
     }
 
     function onChangeEnglish(event) {
@@ -59,7 +62,7 @@ const Word = ({ english, russian, transcription }) => {
                 <td>{word.transcription}</td>
                 <td>{word.russian}</td>
                 <td><button className='table__row__btn table__row__btn_edit' onClick={handleEdit}>&#128221;</button></td>
-                <td><button className='table__row__btn table__row__btn_delete'>&#128465;</button></td>
+                <td><button className='table__row__btn table__row__btn_delete' onClick={() => handleDelete(word.id)}>&#128465;</button></td>
             </tr>
         );
     } else {

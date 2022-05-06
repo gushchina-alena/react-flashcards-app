@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import '../assets/styles/Quiz.css';
 import '../assets/styles/Card.css';
 
-const Card = ({ ...item }) => {
+const Card = ({ wordsMastered, setWordsMastered, ...item }) => {
     const [isFront, setIsFront] = useState(true);
 
     function handleOnClick() {
         setIsFront(!isFront);
+        setWordsMastered(wordsMastered + 1)
     }
 
     useEffect(() => {

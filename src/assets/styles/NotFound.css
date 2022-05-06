@@ -1,3 +1,26 @@
+.not-found {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.not-found__text {
+    text-align: center;
+
+}
+
+.not-found__heading {
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
 .not-found__img {
-    width: 10px;
+    display: inline-block;
+}
+
+.not-found__body {
+    font-size: 24px;
+    font-weight: 600;
 }
