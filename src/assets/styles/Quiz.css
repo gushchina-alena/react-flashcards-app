@@ -69,3 +69,7 @@
 .arrow-disabled {
     visibility: hidden;
 }
+
+.loaderquiz-container {
+    padding-top: 2%;
+}

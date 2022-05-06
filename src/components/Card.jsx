@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import '../assets/styles/Quiz.css';
-import '../assets/styles/Card.css';
+import React, { useEffect, useState } from "react";
+import "../assets/styles/Quiz.css";
+import "../assets/styles/Card.css";
 
 const Card = ({ wordsMastered, setWordsMastered, ...item }) => {
     const [isFront, setIsFront] = useState(true);
@@ -13,6 +13,7 @@ const Card = ({ wordsMastered, setWordsMastered, ...item }) => {
     useEffect(() => {
         setIsFront(true);
     }, [item.id]);
+
     return (
         <div>
                 {isFront ?

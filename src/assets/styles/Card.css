@@ -14,6 +14,17 @@
     text-align: center;
 }
 
+.loader-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.loader {
+    width: 300px;
+    height: 300px;
+}
+
 .card__btn {
     display: inline-block;
     outline-color: blueviolet;

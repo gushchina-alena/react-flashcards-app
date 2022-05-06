@@ -91,3 +91,8 @@ input:hover {
     border: 3px solid #EAB14D;
     padding: 14px 18px;
 }
+
+.loaderhome-container {
+    padding-top: 8%;
+    height: 70vh;
+}

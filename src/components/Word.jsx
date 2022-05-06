@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import '../assets/styles/Home.css';
-import cancel from '../assets/images/cancel.png';
-import save from '../assets/images/checked.png';
+import React, { useState } from "react";
+import "../assets/styles/Home.css";
+import cancel from "../assets/images/cancel.png";
+import save from "../assets/images/checked.png";
 
 const Word = ({ english, russian, transcription, id }) => {
     const [isEditMode, setEditMode] = useState(false);
-    const [value, setValue] = useState([]);
-    const [list, setList] = useState([]);
     const [word, setWord] = useState({ english, russian, transcription, id });
 
     function handleEdit() {
@@ -57,17 +55,17 @@ const Word = ({ english, russian, transcription, id }) => {
 
     if (!isEditMode) {
         return (
-            <tr className='table__row'>
+            <tr className="table__row">
                 <td>{word.english}</td>
                 <td>{word.transcription}</td>
                 <td>{word.russian}</td>
-                <td><button className='table__row__btn table__row__btn_edit' onClick={handleEdit}>&#128221;</button></td>
-                <td><button className='table__row__btn table__row__btn_delete' onClick={() => handleDelete(word.id)}>&#128465;</button></td>
+                <td><button className="table__row__btn table__row__btn_edit" onClick={handleEdit}>&#128221;</button></td>
+                <td><button className="table__row__btn table__row__btn_delete" onClick={() => handleDelete(word.id)}>&#128465;</button></td>
             </tr>
         );
     } else {
         return (
-            <tr className='table__row'>
+            <tr className="table__row">
                 <td>
                     <input value={word.english} onChange={onChangeEnglish} />
                 </td>
@@ -78,10 +76,10 @@ const Word = ({ english, russian, transcription, id }) => {
                     <input value={word.russian} onChange={onChangeRussian} />
                 </td>
                 <td>
-                    <button className='table__row__btn table__row__btn_save' onClick={handleSave}><img src={save} /></button>
+                    <button className="table__row__btn table__row__btn_save" onClick={handleSave}><img src={save} /></button>
                 </td>
                 <td>
-                    <button className='table__row__btn table__row__btn_cancel' onClick={handleCancel}><img src={cancel} /></button>
+                    <button className="table__row__btn table__row__btn_cancel" onClick={handleCancel}><img src={cancel} /></button>
                 </td>
             </tr>
         );
